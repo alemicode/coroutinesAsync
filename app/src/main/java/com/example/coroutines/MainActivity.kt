@@ -4,12 +4,9 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.coroutines.R
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.*
 import kotlinx.coroutines.Dispatchers.IO
 import kotlinx.coroutines.Dispatchers.Main
-import kotlinx.coroutines.async
-import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
 import kotlin.system.measureTimeMillis
 
 class MainActivity : AppCompatActivity() {
@@ -78,12 +75,12 @@ class MainActivity : AppCompatActivity() {
 
     private suspend fun getRersultFromApiOne(): String {
 
-        // delay(1000)
+         delay(1000)
         return RESULT_1
     }
 
     private suspend fun getResultFromApiTwo(): String {
-        //delay(1700)
+        delay(1700)
         return RESULT_2
     }
 }
